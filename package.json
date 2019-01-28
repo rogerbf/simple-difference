@@ -1,0 +1,41 @@
+{
+  "name": "simple-difference",
+  "version": "1.0.0",
+  "description": "return what has changed",
+  "main": "build/simple-difference.cjs.js",
+  "module": "build/simple-difference.esm.js",
+  "browser": "build/simple-difference.umd.js",
+  "scripts": {
+    "build": "rollup -c",
+    "pretest": "npm run build",
+    "test": "jest",
+    "test:development": "NODE_ENV=development jest",
+    "develop": "npm run test:development -- --watch",
+    "coverage": "npm run test:development -- --coverage"
+  },
+  "keywords": [
+    "difference",
+    "diff",
+    "diffing",
+    "change",
+    "discrepancy",
+    "divergence"
+  ],
+  "files": [
+    "build"
+  ],
+  "author": "rogerbf <roger@bergfa.lk> (https://bergfa.lk/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.2.2",
+    "@babel/plugin-transform-modules-commonjs": "7.2.0",
+    "@babel/preset-env": "7.3.1",
+    "babel-jest": "24.0.0",
+    "eslint": "5.12.1",
+    "jest": "24.0.0",
+    "rollup": "1.1.2",
+    "rollup-plugin-babel": "4.3.2",
+    "rollup-plugin-commonjs": "9.2.0",
+    "rollup-plugin-node-resolve": "4.0.0"
+  }
+}
