@@ -37,5 +37,14 @@
     "rollup-plugin-babel": "4.3.2",
     "rollup-plugin-commonjs": "9.2.0",
     "rollup-plugin-node-resolve": "4.0.0"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerbf/simple-difference.git"
+  },
+  "homepage": "https://github.com/rogerbf/simple-difference#readme"
 }
