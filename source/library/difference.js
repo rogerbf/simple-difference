@@ -1,9 +1,9 @@
-const toString = value => ({}.toString.apply(value))
+const toString = value => Object.prototype.toString.apply(value)
 
 const difference = (current, next) => {
   if (current !== next) {
     if (toString(current) !== toString(next)) {
-      return next || next === null ? next : current
+      return next
     } else {
       if (Array.isArray(next)) {
         if (current.length !== next.length) {
@@ -28,14 +28,20 @@ const difference = (current, next) => {
         )
 
         return keys.reduce((result, key) => {
-          const diff = difference(current[key], next[key])
+          if (current.hasOwnProperty(key)) {
+            if (next.hasOwnProperty(key)) {
+              const diff = difference(current[key], next[key])
 
-          if (next[key] || next[key] === 0) {
-            return diff
-              ? Object.assign(result || {}, {
-                  [key]: diff,
-                })
-              : result
+              return diff !== null || next[key] === null
+                ? Object.assign(result || {}, {
+                    [key]: diff,
+                  })
+                : result
+            } else {
+              return Object.assign(result || {}, {
+                [key]: undefined,
+              })
+            }
           } else {
             return Object.assign(result || {}, { [key]: next[key] })
           }
