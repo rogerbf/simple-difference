@@ -1,6 +1,6 @@
 {
   "name": "simple-difference",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "return what has changed",
   "main": "build/simple-difference.cjs.js",
   "module": "build/simple-difference.esm.js",
@@ -31,7 +31,7 @@
     "@babel/plugin-transform-modules-commonjs": "7.2.0",
     "@babel/preset-env": "7.3.1",
     "babel-jest": "24.0.0",
-    "eslint": "5.12.1",
+    "eslint": "5.13.0",
     "jest": "24.0.0",
     "rollup": "1.1.2",
     "rollup-plugin-babel": "4.3.2",
