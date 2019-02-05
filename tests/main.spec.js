@@ -157,6 +157,14 @@ describe(`difference`, () => {
     expect(difference({ a: `a` }, { a: null })).toEqual({ a: null })
   })
 
+  test(`({ a: 'a' }, { a: undefined })`, () => {
+    expect(difference({ a: `a` }, { a: undefined })).toEqual({ a: undefined })
+  })
+
+  test(`({ a: 'a' }, { a: 0 })`, () => {
+    expect(difference({ a: `a` }, { a: 0 })).toEqual({ a: 0 })
+  })
+
   test(`({ name: 'simple', age: 0 }, { name: 'difference', age: 0 })`, () => {
     expect(
       difference({ name: `simple`, age: 0 }, { name: `difference`, age: 0 })
