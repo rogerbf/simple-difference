@@ -23,7 +23,7 @@ const difference = (current, next) => {
 
         return result
       } else if (typeof next === `object`) {
-        const [ ...keys ] = new Set(
+        const [...keys] = new Set(
           Object.keys(current).concat(Object.keys(next))
         )
 

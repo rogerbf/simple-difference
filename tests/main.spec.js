@@ -42,33 +42,33 @@ describe(`difference`, () => {
   })
 
   test(`([ 1, 2, 3 ], [ 1, 2, 3 ])`, () => {
-    const a = [ 1, 2, 3 ]
-    const b = [ 1, 2, 3 ]
+    const a = [1, 2, 3]
+    const b = [1, 2, 3]
     const expected = null
 
     expect(difference(a, b)).toEqual(expected)
   })
 
   test(`([ 1, 2, 3 ], [ 1, 2, 3, 4 ])`, () => {
-    const a = [ 1, 2, 3 ]
-    const b = [ 1, 2, 3, 4 ]
-    const expected = [ 1, 2, 3, 4 ]
+    const a = [1, 2, 3]
+    const b = [1, 2, 3, 4]
+    const expected = [1, 2, 3, 4]
 
     expect(difference(a, b)).toEqual(expected)
   })
 
   test(`([ 1, 2, 5 ], [ 1, 2, 3, 4 ])`, () => {
-    const a = [ 1, 2, 5 ]
-    const b = [ 1, 2, 3, 4 ]
-    const expected = [ 1, 2, 3, 4 ]
+    const a = [1, 2, 5]
+    const b = [1, 2, 3, 4]
+    const expected = [1, 2, 3, 4]
 
     expect(difference(a, b)).toEqual(expected)
   })
 
   test(`([ 1, 2, 3, 4 ], [ 1, 2, 5 ])`, () => {
-    const a = [ 1, 2, 3, 4 ]
-    const b = [ 1, 2, 5 ]
-    const expected = [ 1, 2, 5 ]
+    const a = [1, 2, 3, 4]
+    const b = [1, 2, 5]
+    const expected = [1, 2, 5]
 
     expect(difference(a, b)).toEqual(expected)
   })
@@ -102,10 +102,10 @@ describe(`difference`, () => {
 
   test(`({ a: [ 1, 2, 3 ] }, { a: [ 1, 3, 4 ] })`, () => {
     const a = {
-      a: [ 1, 2, 3 ],
+      a: [1, 2, 3],
     }
     const b = {
-      a: [ 1, 3, 4 ],
+      a: [1, 3, 4],
     }
 
     expect(difference(a, b)).toEqual(b)
@@ -181,7 +181,7 @@ describe(`difference`, () => {
     const current = {
       one: 1,
       collections: {
-        numbers: [ 1, 2, 3 ],
+        numbers: [1, 2, 3],
         things: [
           {
             id: 1,
@@ -198,7 +198,7 @@ describe(`difference`, () => {
     const next = {
       one: 1,
       collections: {
-        numbers: [ 1, 2, 3 ],
+        numbers: [1, 2, 3],
         things: [
           {
             id: 1,
