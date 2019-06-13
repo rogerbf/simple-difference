@@ -1,6 +1,6 @@
 {
   "name": "simple-difference",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "return what has changed",
   "main": "build/simple-difference.cjs.js",
   "module": "build/simple-difference.esm.js",
