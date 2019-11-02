@@ -1,6 +1,6 @@
 {
   "name": "simple-difference",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "return what has changed",
   "main": "build/simple-difference.cjs.js",
   "module": "build/simple-difference.esm.js",
@@ -29,19 +29,19 @@
   "author": "rogerbf <roger@bergfa.lk> (https://bergfa.lk/)",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "7.4.5",
-    "@babel/plugin-transform-modules-commonjs": "7.4.4",
-    "@babel/preset-env": "7.4.5",
-    "babel-jest": "24.8.0",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "4.3.0",
-    "eslint-plugin-prettier": "3.1.0",
-    "jest": "24.8.0",
+    "@babel/core": "7.6.4",
+    "@babel/plugin-transform-modules-commonjs": "7.6.0",
+    "@babel/preset-env": "7.6.3",
+    "babel-jest": "24.9.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "6.5.0",
+    "eslint-plugin-prettier": "3.1.1",
+    "jest": "24.9.0",
     "prettier": "1.18.2",
-    "rollup": "1.15.3",
-    "rollup-plugin-babel": "4.3.2",
-    "rollup-plugin-commonjs": "10.0.0",
-    "rollup-plugin-node-resolve": "5.0.2"
+    "rollup": "1.26.3",
+    "rollup-plugin-babel": "4.3.3",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-node-resolve": "5.2.0"
   },
   "directories": {
     "test": "tests"
