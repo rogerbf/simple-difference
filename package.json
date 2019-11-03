@@ -1,7 +1,7 @@
 {
   "name": "simple-difference",
-  "version": "2.0.0",
-  "description": "return what has changed",
+  "version": "2.0.1",
+  "description": "reveal differences",
   "main": "build/simple-difference.cjs.js",
   "module": "build/simple-difference.esm.js",
   "browser": "build/simple-difference.umd.js",
