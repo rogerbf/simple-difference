@@ -64,7 +64,7 @@ const difference = (left, right) => {
           })
         }
       } else {
-        return Object.assign(result, { [key]: right[key] })
+        return Object.assign(result || {}, { [key]: right[key] })
       }
     }, undefined)
 

@@ -187,6 +187,11 @@ describe("difference", () => {
     [null, false, { equal: false, diff: false }],
     [undefined, false, { equal: false, diff: false }],
     [{ foo: "bar" }, { foo: "bar" }, { equal: true }],
+    [
+      { numbers: { one: 1 } },
+      { numbers: { one: 1, two: 2 } },
+      { equal: false, diff: { numbers: { two: 2 } } },
+    ],
     [new String("foo"), new String("foo"), { equal: true }],
     [0, null, { equal: false, diff: null }],
     [0, NaN, { equal: false, diff: NaN }],
