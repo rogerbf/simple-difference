@@ -34,13 +34,25 @@ describe("sameness tests", () => {
     // Not in "Sameness Comparisons":
     [new Map(), new Map(), true],
     [
-      new Map([[1, { a: "a" }], [2, { b: "b" }]]),
-      new Map([[1, { a: "a" }], [2, { b: "b" }]]),
+      new Map([
+        [1, { a: "a" }],
+        [2, { b: "b" }],
+      ]),
+      new Map([
+        [1, { a: "a" }],
+        [2, { b: "b" }],
+      ]),
       true,
     ],
     [
-      new Map([[1, { a: "a" }], [2, { b: "b" }]]),
-      new Map([[1, { a: "a" }], [2, { b: "c" }]]),
+      new Map([
+        [1, { a: "a" }],
+        [2, { b: "b" }],
+      ]),
+      new Map([
+        [1, { a: "a" }],
+        [2, { b: "c" }],
+      ]),
       false,
     ],
     [new Set(), new Set(), true],
@@ -200,13 +212,25 @@ describe("difference", () => {
     // Not in "Sameness Comparisons":
     [new Map(), new Map(), { equal: true }],
     [
-      new Map([[1, { a: "a" }], [2, { b: "b" }]]),
-      new Map([[1, { a: "a" }], [2, { b: "b" }]]),
+      new Map([
+        [1, { a: "a" }],
+        [2, { b: "b" }],
+      ]),
+      new Map([
+        [1, { a: "a" }],
+        [2, { b: "b" }],
+      ]),
       { equal: true },
     ],
     [
-      new Map([[1, { a: "a" }], [2, { b: "b" }]]),
-      new Map([[1, { a: "a" }], [2, { b: "c" }]]),
+      new Map([
+        [1, { a: "a" }],
+        [2, { b: "b" }],
+      ]),
+      new Map([
+        [1, { a: "a" }],
+        [2, { b: "c" }],
+      ]),
       { equal: false, diff: new Map([[2, { b: "c" }]]) },
     ],
     [
@@ -215,18 +239,33 @@ describe("difference", () => {
       { equal: false, diff: new Map([[1, { a: "a" }]]) },
     ],
     [
-      new Map([["a", 1], ["b", 2]]),
-      new Map([["a", 1], ["b", 2]]),
+      new Map([
+        ["a", 1],
+        ["b", 2],
+      ]),
+      new Map([
+        ["a", 1],
+        ["b", 2],
+      ]),
       { equal: true },
     ],
     [
-      new Map([["a", 1], ["b", 1]]),
-      new Map([["a", 1], ["b", 2]]),
+      new Map([
+        ["a", 1],
+        ["b", 1],
+      ]),
+      new Map([
+        ["a", 1],
+        ["b", 2],
+      ]),
       { equal: false, diff: new Map([["b", 2]]) },
     ],
     [new Map([[{ a: "a" }, 1]]), new Map([[{ a: "a" }, 1]]), { equal: true }],
     [
-      new Map([[{ a: "a" }, 1], [2, 3]]),
+      new Map([
+        [{ a: "a" }, 1],
+        [2, 3],
+      ]),
       new Map([[{ a: "a" }, 1]]),
       { equal: false, diff: new Map([[{ a: "a" }, 1]]) },
     ],
